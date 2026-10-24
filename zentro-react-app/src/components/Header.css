@@ -1,0 +1,308 @@
+
+.zentro-header {
+  width: 100%;
+  background: #FFFDF9;
+  color: #242424;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  border-bottom: 1px solid #EAE6DF;
+  box-shadow: 0 4px 18px rgba(36, 36, 36, 0.04);
+}
+
+.header-container {
+  width: 100%;
+  max-width: 1440px;
+  min-height: 78px;
+  margin: 0 auto;
+  padding: 14px 5%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 32px;
+}
+
+/* Logo */
+
+.zentro-logo {
+  flex-shrink: 0;
+  color: #242424;
+  font-size: 30px;
+  font-weight: 800;
+  letter-spacing: -1.6px;
+  text-decoration: none;
+  line-height: 1;
+}
+
+.zentro-logo span {
+  color: #C2410C;
+}
+
+/* Navigation */
+
+.header-navigation {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  flex-shrink: 0;
+}
+
+.header-nav-link {
+  position: relative;
+  padding: 8px 0;
+  color: #5B6170;
+  font-size: 14px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.header-nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  border-radius: 10px;
+  background: #C2410C;
+  transition: width 0.2s ease;
+}
+
+.header-nav-link:hover {
+  color: #242424;
+}
+
+.header-nav-link:hover::after {
+  width: 100%;
+}
+
+/* Search */
+
+.header-search {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  max-width: 430px;
+  min-width: 0;
+  height: 46px;
+  padding: 4px 5px 4px 15px;
+  gap: 10px;
+  background: #F5F3EE;
+  border: 1px solid #E8E3DA;
+  border-radius: 999px;
+  transition: border-color 0.2s ease,
+    box-shadow 0.2s ease,
+    background 0.2s ease;
+}
+
+.header-search:focus-within {
+  background: #FFFFFF;
+  border-color: #C2410C;
+  box-shadow: 0 0 0 3px rgba(194, 65, 12, 0.1);
+}
+
+.header-search-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  color: #77736D;
+}
+
+.header-search input {
+  flex: 1;
+  width: 100%;
+  min-width: 0;
+  padding: 0;
+  border: none;
+  outline: none;
+  background: transparent;
+  color: #242424;
+  font-family: inherit;
+  font-size: 13px;
+}
+
+.header-search input::placeholder {
+  color: #77736D;
+}
+
+.header-search input::-webkit-search-cancel-button {
+  cursor: pointer;
+}
+
+.header-search button {
+  flex-shrink: 0;
+  min-height: 36px;
+  padding: 0 19px;
+  border: none;
+  border-radius: 999px;
+  background: #C2410C;
+  color: #FFFFFF;
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s ease,
+    transform 0.2s ease;
+}
+
+.header-search button:hover {
+  background: #9A3412;
+}
+
+.header-search button:active {
+  transform: scale(0.97);
+}
+
+/* Cart */
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.header-cart-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  min-height: 46px;
+  padding: 0 17px;
+  border: 1px solid #E4DED5;
+  border-radius: 999px;
+  background: #FFFFFF;
+  color: #242424;
+  text-decoration: none;
+  transition: background 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.header-cart-link:hover {
+  background: #F5F3EE;
+  border-color: #D5C9BC;
+}
+
+.header-cart-link svg {
+  flex-shrink: 0;
+}
+
+.header-cart-label {
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.header-cart-count {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 23px;
+  height: 23px;
+  padding: 0 6px;
+  border-radius: 50px;
+  background: #C2410C;
+  color: #FFFFFF;
+  font-size: 11px;
+  font-weight: 700;
+  line-height: 1;
+}
+
+/* Keyboard accessibility */
+
+.zentro-header a:focus-visible,
+.zentro-header button:focus-visible {
+  outline: 2px solid #C2410C;
+  outline-offset: 4px;
+}
+
+/* Tablet */
+
+@media (max-width: 1050px) {
+  .header-container {
+    gap: 22px;
+    padding-left: 3%;
+    padding-right: 3%;
+  }
+
+  .header-navigation {
+    gap: 18px;
+  }
+
+  .header-search {
+    max-width: 360px;
+  }
+
+  .header-cart-link {
+    padding: 0 13px;
+  }
+}
+
+/* Mobile */
+
+@media (max-width: 760px) {
+  .header-container {
+    min-height: auto;
+    padding: 15px 4%;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 16px;
+  }
+
+  .zentro-logo {
+    font-size: 27px;
+  }
+
+  .header-navigation {
+    grid-column: 1;
+    grid-row: 2;
+    gap: 24px;
+  }
+
+  .header-nav-link {
+    font-size: 13px;
+  }
+
+  .header-actions {
+    grid-column: 2;
+    grid-row: 1;
+    justify-self: end;
+  }
+
+  .header-search {
+    grid-column: 1 / -1;
+    grid-row: 3;
+    max-width: none;
+    width: 100%;
+  }
+
+  .header-cart-link {
+    min-height: 42px;
+  }
+}
+
+/* Small mobile */
+
+@media (max-width: 380px) {
+  .header-container {
+    gap: 13px;
+  }
+
+  .header-navigation {
+    gap: 17px;
+  }
+
+  .header-cart-link {
+    gap: 6px;
+    padding: 0 10px;
+  }
+
+  .header-cart-link svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  .header-cart-label {
+    font-size: 12px;
+  }
+}

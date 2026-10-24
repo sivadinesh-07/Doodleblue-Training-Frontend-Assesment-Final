@@ -1,0 +1,57 @@
+
+.quantity-control {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  min-height: 42px;
+  padding: 4px 8px;
+  border: 1px solid #e5e0d8;
+  border-radius: 8px;
+  background: #fffdf9;
+}
+
+.quantity-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  border: none;
+  border-radius: 6px;
+  background: transparent;
+  color: #c2410c;
+  font-size: 22px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.quantity-btn:hover:not(:disabled) {
+  background: #f5e8df;
+}
+
+.quantity-btn:disabled {
+  color: #b9b9b9;
+  cursor: not-allowed;
+}
+
+.quantity-value {
+  min-width: 24px;
+  color: #242424;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+@media (max-width: 480px) {
+  .quantity-control {
+    gap: 8px;
+    min-height: 38px;
+  }
+
+  .quantity-btn {
+    width: 26px;
+    height: 28px;
+  }
+}
