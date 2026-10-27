@@ -76,7 +76,7 @@ function Landing() {
           <div className="landing-hero-glow"></div>
 
           <img
-            src="https://images.unsplash.com/photo-1496181133206-80ce9b88a853?auto=format&fit=crop&w=1200&q=85"
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTWC2-veP8Qr3eezENE6Tg1vTnWgQUNxOMhF4i1wsrOHw&s=10"
             alt="Laptop displayed on a clean desk"
             className="landing-hero-image"
           />
